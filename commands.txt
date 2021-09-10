@@ -3,3 +3,7 @@ pyuic5 -x login.ui -o PythonLoginUI.py
 
 
 pyqt5_designs
+
+
+
+git command : "git push -u origin main"
