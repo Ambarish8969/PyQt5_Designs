@@ -127,6 +127,7 @@ class Ui_MainWindow(object):
         add = int(num1)+int(num2)
         self.result.setText(str(add))
         print("Sum is : ", add)
+        
 
     def sub_func(self):
         num1 = self.lineEdit.text()
