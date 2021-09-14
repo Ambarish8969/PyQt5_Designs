@@ -9,23 +9,23 @@
 #         arr1.remove(j)
 # print(arr1)
 
-# import os
+import os
 
 # #Creating a file......
-# f=open("ambi2.txt","a")
+f=open("ambi2.txt","a")
 
 # #Writing a file......
-# f=open("ambi2.txt","w")
-# f.write("I am Disco dancer ....")
-# f.close()
+f=open("ambi2.txt","w")
+f.write("I am Disco dancer ....")
+f.close()
 
 #Reading a file.....
-# f=open("ambi2.txt","r")
-# r=f.read()
-# print(r)
+f=open("ambi2.txt","r")
+r=f.read()
+print(r)
 
 #Deleting a file....
-# os.remove("ambi2.txt")
+os.remove("ambi2.txt")
 
 # p=open("ambarish.txt","w")
 # p=open("ambarish.txt","r")
