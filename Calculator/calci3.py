@@ -140,8 +140,15 @@ class Ui_MainWindow(object):
         self.outputlabel.setStyleSheet("font: 28pt \"MS Shell Dlg 2\";")
         self.outputlabel.setFrameShape(QtWidgets.QFrame.Box)
         self.outputlabel.setText("")
-        self.outputlabel.setAlignment(QtCore.Qt.AlignRight|QtCore.Qt.AlignTrailing|QtCore.Qt.AlignVCenter)
+        self.outputlabel.setAlignment(
+            QtCore.Qt.AlignRight | QtCore.Qt.AlignTrailing | QtCore.Qt.AlignVCenter)
         self.outputlabel.setObjectName("outputlabel")
+        self.pushButton = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton.setGeometry(QtCore.QRect(80, 450, 75, 75))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.pushButton.setFont(font)
+        self.pushButton.setObjectName("pushButton")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 565, 26))
@@ -153,7 +160,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
-        
+
         self.plus_button.clicked.connect(self.plus_butt)
         self.minus_button.clicked.connect(self.min_butt)
         self.mul_button.clicked.connect(self.mul_butt)
@@ -168,66 +175,69 @@ class Ui_MainWindow(object):
         self.pushButton_8.clicked.connect(self.eight_butt)
         self.pushButton_9.clicked.connect(self.nine_butt)
         self.equal_button.clicked.connect(self.equal_butt)
+        self.pushButton.clicked.connect(self.clear_func)
 
-    
+    def clear_func(self):
+        self.outputlabel.clear()
+
     def plus_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"+")
-        
+
     def min_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"-")
 
     def mul_butt(self):
-        text=self.outputlabel.text()
-        self.outputlabel.setText(text+"*")
+        text = self.outputlabel.text()
+        self.outputlabel.setText(text+"x")
 
     def div_butt(self):
-        text=self.outputlabel.text()
-        self.outputlabel.setText(text+"+/")
+        text = self.outputlabel.text()
+        self.outputlabel.setText(text+"/")
 
     def one_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"1")
 
     def two_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"2")
 
     def three_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"3")
 
     def four_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"4")
 
     def five_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"5")
 
     def six_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"6")
 
     def seven_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"7")
 
     def eight_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"8")
 
     def nine_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         self.outputlabel.setText(text+"9")
 
     def equal_butt(self):
-        text=self.outputlabel.text()
+        text = self.outputlabel.text()
         try:
-            ans=eval(text)
+            ans = eval(text)
             self.outputlabel.setText(str(ans))
-            print("Result is : ",ans)
+            print("Result is : ", ans)
         except:
             self.outputlabel.setText("Wrong Input")
 
@@ -248,6 +258,7 @@ class Ui_MainWindow(object):
         self.mul_button.setText(_translate("MainWindow", "*"))
         self.div_button.setText(_translate("MainWindow", "/"))
         self.equal_button.setText(_translate("MainWindow", "="))
+        self.pushButton.setText(_translate("MainWindow", "Clear"))
 
 
 if __name__ == "__main__":
