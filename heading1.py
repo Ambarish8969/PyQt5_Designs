@@ -94,7 +94,7 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         self.actionnew.triggered.connect(lambda:self.clicked("New was Clicked."))
-        # self.actionnew.triggered.connect(self.clicked(text=("New was clicked.")))
+        # self.actionnew.triggered.connect(self.clicked(("New was clicked.")))
         self.actionopen.triggered.connect(lambda:self.clicked("Open was Clicked."))
         self.actionclose.triggered.connect(lambda:self.clicked("Close was Clicked."))
         self.actionExport.triggered.connect(lambda:self.clicked("Export was Clicked."))
