@@ -144,6 +144,23 @@ color: rgb(255, 255, 255);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(170, 255, 255);
+color: rgb(0, 0, 0);</string>
+     </property>
+     <property name="text">
+      <string>Terminal</string>
+     </property>
+    </widget>
    </widget>
    <widget class="QFrame" name="frame_3">
     <property name="geometry">
@@ -164,6 +181,23 @@ background-color: rgb(238, 236, 220);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
+    <widget class="QLabel" name="label_5">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>180</y>
+       <width>171</width>
+       <height>61</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
+color: rgb(85, 0, 255);</string>
+     </property>
+     <property name="text">
+      <string>TextLabel</string>
+     </property>
+    </widget>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -179,36 +213,36 @@ background-color: rgb(238, 236, 220);</string>
     <property name="title">
      <string>File</string>
     </property>
-    <addaction name="actionnew"/>
-    <addaction name="actionopen"/>
-    <addaction name="actionclose"/>
-    <addaction name="actionExport"/>
-    <addaction name="actionImpot"/>
+    <addaction name="actionOpen"/>
+    <addaction name="actionNew"/>
+    <addaction name="actionExport_2"/>
+    <addaction name="actionImport"/>
     <addaction name="actionRecent_Files"/>
-    <addaction name="actionExit"/>
+    <addaction name="actionSave_3"/>
+    <addaction name="actionExit_2"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
     <property name="title">
      <string>Edit</string>
     </property>
-    <addaction name="actionCut"/>
+    <addaction name="actionCut_2"/>
     <addaction name="actionPaste_2"/>
-    <addaction name="actionDelete"/>
+    <addaction name="actionDelete_2"/>
+    <addaction name="actionCopy_3"/>
    </widget>
    <widget class="QMenu" name="menuTools">
     <property name="title">
      <string>Tools</string>
     </property>
-    <widget class="QMenu" name="menuSettings">
+    <widget class="QMenu" name="menuSettings_2">
      <property name="title">
       <string>Settings</string>
      </property>
-     <addaction name="actionDisplay_Settings"/>
-     <addaction name="actionFont_Settings"/>
-     <addaction name="actionWindow_Setting"/>
+     <addaction name="actionDisplay_Settings_2"/>
+     <addaction name="actionFont_Settings_2"/>
     </widget>
-    <addaction name="menuSettings"/>
-    <addaction name="actionNew_Window"/>
+    <addaction name="separator"/>
+    <addaction name="menuSettings_2"/>
    </widget>
    <widget class="QMenu" name="menuHelp">
     <property name="title">
@@ -241,8 +275,14 @@ background-color: rgb(238, 236, 220);</string>
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
-   <addaction name="actionNew"/>
+   <addaction name="actionSave_2"/>
    <addaction name="actionCopy"/>
+   <addaction name="actionNew"/>
+   <addaction name="actionImport"/>
+   <addaction name="actionExport_2"/>
+   <addaction name="actionDelete_2"/>
+   <addaction name="actionCut_2"/>
+   <addaction name="actionSettings"/>
   </widget>
   <action name="actionnew">
    <property name="text">
@@ -337,27 +377,146 @@ background-color: rgb(238, 236, 220);</string>
     <string>New Window</string>
    </property>
   </action>
-  <action name="actionNew">
+  <action name="actionSave">
+   <property name="text">
+    <string>Save</string>
+   </property>
+  </action>
+  <action name="actionExit_2">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+  <action name="actionSave_2">
    <property name="icon">
     <iconset>
-     <normaloff>PySide_icons/blue-document--plus.png</normaloff>PySide_icons/blue-document--plus.png</iconset>
+     <normaloff>PySide_icons/icons8-save-30.png</normaloff>PySide_icons/icons8-save-30.png</iconset>
    </property>
    <property name="text">
-    <string>New</string>
-   </property>
-   <property name="font">
-    <font>
-     <pointsize>12</pointsize>
-    </font>
+    <string>Save</string>
    </property>
   </action>
   <action name="actionCopy">
    <property name="icon">
     <iconset>
-     <normaloff>PySide_icons/document-copy.png</normaloff>PySide_icons/document-copy.png</iconset>
+     <normaloff>PySide_icons/icons8-copy-30.png</normaloff>PySide_icons/icons8-copy-30.png</iconset>
    </property>
    <property name="text">
     <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-new-file-24.png</normaloff>PySide_icons/icons8-new-file-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionCopy_2">
+   <property name="text">
+    <string>Copy</string>
+   </property>
+  </action>
+  <action name="actionOpen">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-opened-folder-24.png</normaloff>PySide_icons/icons8-opened-folder-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Open</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionImport">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-import-24.png</normaloff>PySide_icons/icons8-import-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="actionExport_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-export-30.png</normaloff>PySide_icons/icons8-export-30.png</iconset>
+   </property>
+   <property name="text">
+    <string>Export</string>
+   </property>
+  </action>
+  <action name="actionSave_3">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-save-30.png</normaloff>PySide_icons/icons8-save-30.png</iconset>
+   </property>
+   <property name="text">
+    <string>Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionCopy_3">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-copy-30.png</normaloff>PySide_icons/icons8-copy-30.png</iconset>
+   </property>
+   <property name="text">
+    <string>Copy</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+C</string>
+   </property>
+  </action>
+  <action name="actionDelete_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-delete-file-24.png</normaloff>PySide_icons/icons8-delete-file-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+D</string>
+   </property>
+  </action>
+  <action name="actionCut_2">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-cut-30.png</normaloff>PySide_icons/icons8-cut-30.png</iconset>
+   </property>
+   <property name="text">
+    <string>Cut</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+X</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="icon">
+    <iconset>
+     <normaloff>PySide_icons/icons8-settings-24.png</normaloff>PySide_icons/icons8-settings-24.png</iconset>
+   </property>
+   <property name="text">
+    <string>Settings</string>
+   </property>
+  </action>
+  <action name="actionDisplay_Settings_2">
+   <property name="text">
+    <string>Display Settings</string>
+   </property>
+  </action>
+  <action name="actionFont_Settings_2">
+   <property name="text">
+    <string>Font Settings</string>
    </property>
   </action>
  </widget>
