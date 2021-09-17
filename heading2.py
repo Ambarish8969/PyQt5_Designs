@@ -167,17 +167,9 @@ class Ui_MainWindow(object):
         self.window.show()
 
     def browse(self):
-        # fname = QFileDialog.getOpenFileName(self, 'Open file', 'D:\6th sem Notes')
-        # self.actionopen.
-        filename =QFileDialog.getOpenFileName(self, 'Open File','',QtWidgets=None,)
-        fname = open(filename,'r')
-        data = fname.read()
-        self.actionopen.setText(data)
-        fname.close()
-        self.editor()
-        while fname:
-              text=fname.read()
-              self.actionopen.setText(text)
+        path = QFileDialog.getOpenFileName(None, 'Open a file', '','All Files (*.*)')
+        if path != ('', ''):
+            print("File path : "+ path[0])
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
