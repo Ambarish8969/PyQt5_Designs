@@ -6,12 +6,15 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1020</width>
-    <height>600</height>
+    <width>1011</width>
+    <height>611</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>ATSSL</string>
+  </property>
+  <property name="animated">
+   <bool>true</bool>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="frame">
@@ -19,13 +22,12 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>141</width>
-      <height>431</height>
+      <width>131</width>
+      <height>291</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(167, 167, 167);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(255, 255, 255);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -33,110 +35,75 @@ color: rgb(255, 255, 255);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QToolBox" name="toolBox">
+    <widget class="QLabel" name="label">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>4</x>
        <y>10</y>
-       <width>131</width>
-       <height>401</height>
+       <width>111</width>
+       <height>31</height>
       </rect>
      </property>
-     <property name="currentIndex">
-      <number>1</number>
+     <property name="styleSheet">
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
      </property>
-     <widget class="QWidget" name="page">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>131</width>
-        <height>339</height>
-       </rect>
+     <property name="text">
+      <string>Select Protocol</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_5">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>101</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">font: 9pt &quot;MS Shell Dlg 2&quot;;</string>
+     </property>
+     <property name="text">
+      <string>Connect Button</string>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="comboBox">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>50</y>
+       <width>101</width>
+       <height>22</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Blutooth</string>
       </property>
-      <attribute name="label">
-       <string>Folder_1</string>
-      </attribute>
-      <widget class="QLabel" name="label">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>0</y>
-         <width>55</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Hello.py</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_2">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>55</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Views.py</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QWidget" name="page_2">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>131</width>
-        <height>339</height>
-       </rect>
+     </item>
+     <item>
+      <property name="text">
+       <string>WiFi</string>
       </property>
-      <attribute name="label">
-       <string>Folder_2</string>
-      </attribute>
-      <widget class="QLabel" name="label_3">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>0</y>
-         <width>71</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>index.html</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_4">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>20</y>
-         <width>55</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>index.css</string>
-       </property>
-      </widget>
-     </widget>
+     </item>
+     <item>
+      <property name="text">
+       <string>USB</string>
+      </property>
+     </item>
     </widget>
    </widget>
    <widget class="QFrame" name="frame_2">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>430</y>
-      <width>1041</width>
-      <height>121</height>
+      <x>130</x>
+      <y>0</y>
+      <width>881</width>
+      <height>291</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(116, 116, 116);
-color: rgb(255, 255, 255);</string>
+     <string notr="true">background-color: rgb(202, 202, 202);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -144,36 +111,149 @@ color: rgb(255, 255, 255);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QPushButton" name="pushButton">
+    <widget class="QPushButton" name="pushButton_2">
      <property name="geometry">
       <rect>
-       <x>10</x>
+       <x>212</x>
+       <y>10</y>
+       <width>131</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Dignostic Service</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_3">
+     <property name="geometry">
+      <rect>
+       <x>350</x>
+       <y>10</y>
+       <width>131</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Flash Programming</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_4">
+     <property name="geometry">
+      <rect>
+       <x>490</x>
        <y>10</y>
        <width>93</width>
        <height>28</height>
       </rect>
      </property>
+     <property name="text">
+      <string>Self Test DIDs</string>
+     </property>
+    </widget>
+    <widget class="QFrame" name="frame_6">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>40</y>
+       <width>361</width>
+       <height>108</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>40</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Browse</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="lineEdit">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>201</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="comboBox_2">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>80</y>
+        <width>141</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(226, 226, 226);</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>11 02</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>11 01</string>
+       </property>
+      </item>
+     </widget>
+    </widget>
+    <widget class="QLineEdit" name="lineEdit_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>250</y>
+       <width>171</width>
+       <height>22</height>
+      </rect>
+     </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(170, 255, 255);
-color: rgb(0, 0, 0);</string>
+      <string notr="true">background-color: rgb(255, 255, 255);</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton_6">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>250</y>
+       <width>93</width>
+       <height>28</height>
+      </rect>
      </property>
      <property name="text">
-      <string>Terminal</string>
+      <string>Transmit</string>
      </property>
     </widget>
    </widget>
    <widget class="QFrame" name="frame_3">
     <property name="geometry">
      <rect>
-      <x>140</x>
-      <y>0</y>
-      <width>881</width>
-      <height>431</height>
+      <x>0</x>
+      <y>290</y>
+      <width>1021</width>
+      <height>41</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">color: rgb(0, 0, 0);
-background-color: rgb(238, 236, 220);</string>
+     <string notr="true">background-color: rgb(152, 152, 152);
+border-color: rgb(0, 0, 0);</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::StyledPanel</enum>
@@ -181,23 +261,77 @@ background-color: rgb(238, 236, 220);</string>
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="label_5">
+    <widget class="QLabel" name="label_2">
      <property name="geometry">
       <rect>
-       <x>320</x>
-       <y>180</y>
-       <width>171</width>
-       <height>61</height>
+       <x>480</x>
+       <y>10</y>
+       <width>55</width>
+       <height>16</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">font: 20pt &quot;MS Shell Dlg 2&quot;;
-color: rgb(85, 0, 255);</string>
+      <string notr="true">color: rgb(255, 255, 255);</string>
      </property>
      <property name="text">
-      <string>TextLabel</string>
+      <string>TX</string>
      </property>
     </widget>
+   </widget>
+   <widget class="QFrame" name="frame_4">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>330</y>
+      <width>1031</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">border-color: rgb(0, 0, 0);
+background-color: rgb(214, 214, 214);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="label_3">
+     <property name="geometry">
+      <rect>
+       <x>480</x>
+       <y>10</y>
+       <width>55</width>
+       <height>16</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>RX</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="frame_5">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>370</y>
+      <width>1011</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(238, 226, 255);</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
@@ -205,7 +339,7 @@ color: rgb(85, 0, 255);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1020</width>
+     <width>1011</width>
      <height>26</height>
     </rect>
    </property>
