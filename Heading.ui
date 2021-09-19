@@ -97,7 +97,7 @@
     <property name="geometry">
      <rect>
       <x>130</x>
-      <y>0</y>
+      <y>10</y>
       <width>881</width>
       <height>291</height>
      </rect>
@@ -153,7 +153,7 @@
     <widget class="QFrame" name="frame_6">
      <property name="geometry">
       <rect>
-       <x>0</x>
+       <x>10</x>
        <y>40</y>
        <width>361</width>
        <height>108</height>
@@ -215,31 +215,103 @@
       </item>
      </widget>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_2">
+    <widget class="QListWidget" name="listWidget">
      <property name="geometry">
       <rect>
-       <x>10</x>
-       <y>250</y>
-       <width>171</width>
-       <height>22</height>
+       <x>210</x>
+       <y>40</y>
+       <width>151</width>
+       <height>91</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>ECU Reset</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Identification</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Security Access</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Session</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Stored Data</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Routine Cotrol</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QLabel" name="label_4">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>30</y>
+       <width>91</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="pushButton_6">
-     <property name="geometry">
-      <rect>
-       <x>190</x>
-       <y>250</y>
-       <width>93</width>
-       <height>28</height>
-      </rect>
+      <string notr="true">font: 10pt &quot;MS Shell Dlg 2&quot;;</string>
      </property>
      <property name="text">
-      <string>Transmit</string>
+      <string>ECU Reset</string>
      </property>
+    </widget>
+    <widget class="QFrame" name="frame_7">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>220</y>
+       <width>351</width>
+       <height>80</height>
+      </rect>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <widget class="QLineEdit" name="lineEdit_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>20</y>
+        <width>171</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_6">
+      <property name="geometry">
+       <rect>
+        <x>180</x>
+        <y>20</y>
+        <width>93</width>
+        <height>28</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Transmit</string>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QFrame" name="frame_3">
