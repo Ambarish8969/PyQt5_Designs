@@ -289,6 +289,7 @@ class Ui_MainWindow(object):
         self.frame_7.close()
         self.label_4.close()
         self.listWidget.itemDoubleClicked.connect(self.getitem)
+        # self.pushButton_2.itemDoubleClicked.connect(self.close_list)
         self.pushButton.clicked.connect(self.browse)
         self.pushButton_6.clicked.connect(self.time_show)
         self.comboBox_2.currentIndexChanged.connect(self.press)
@@ -306,6 +307,9 @@ class Ui_MainWindow(object):
 
     def diagn_clicked(self):
         self.listWidget.show()
+
+    def diagn_clicked_again(self):
+        self.listWidget.close()
     
     def time_show(self):
         currentTime=QtCore.QTime.currentTime()
@@ -321,9 +325,9 @@ class Ui_MainWindow(object):
         select=self.comboBox_2.currentText()
         data=['Hard','Soft']
         print(select)
-        if select=="Hard":
+        if select=="Hard Reset":
             self.lineEdit_2.setText(str(len(data))+str(" 11 01"))
-        elif(select=="Soft"):
+        elif(select=="Soft Reset"):
             self.lineEdit_2.setText(str(len(data))+str(" 11 02"))
         else:
             pass
@@ -341,8 +345,8 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Flash Programming"))
         self.pushButton_4.setText(_translate("MainWindow", "Self Test DIDs"))
         self.pushButton.setText(_translate("MainWindow", "Browse"))
-        self.comboBox_2.setItemText(0, _translate("MainWindow", "Hard"))
-        self.comboBox_2.setItemText(1, _translate("MainWindow", "Soft"))
+        self.comboBox_2.setItemText(0, _translate("MainWindow", "Hard Reset"))
+        self.comboBox_2.setItemText(1, _translate("MainWindow", "Soft Reset"))
         __sortingEnabled = self.listWidget.isSortingEnabled()
         self.listWidget.setSortingEnabled(False)
         item = self.listWidget.item(0)
