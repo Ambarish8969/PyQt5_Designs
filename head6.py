@@ -293,6 +293,7 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(self.browse)
         self.pushButton_6.clicked.connect(self.time_show)
         self.comboBox_2.currentIndexChanged.connect(self.press)
+        self.listopen=False
 
     def getitem(self):
         selected=self.listWidget.currentRow()
@@ -306,7 +307,12 @@ class Ui_MainWindow(object):
         
 
     def diagn_clicked(self):
-        self.listWidget.show()
+        if self.listopen==False:
+            self.listWidget.show()
+            self.listopen=True
+        else:
+            self.listWidget.close()
+            self.listopen=False
 
     def diagn_clicked_again(self):
         self.listWidget.close()
