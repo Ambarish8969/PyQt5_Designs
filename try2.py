@@ -3,14 +3,14 @@ import xml.etree.ElementTree as ET
   
 # users_list = ["GeeksForGeeks", "Arka", "Computer Science", "Engineering", "Portal"]
 f=open("try100.txt","r")
-users_list=f.readlines()
+users_list=f.read()
 print(users_list)
 
 def create_xml():
     # we make root element
-    usrconfig = ET.Element("usrconfig")
+    usrconfig = ET.Element("File_Name")
     # create sub element
-    usrconfig = ET.SubElement(usrconfig, "usrconfig")
+    usrconfig = ET.SubElement(usrconfig, "sub")
     # insert list element into sub elements
     for user in range(len( users_list)):
         usr = ET.SubElement(usrconfig, "usr")

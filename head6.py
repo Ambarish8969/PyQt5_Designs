@@ -14,6 +14,7 @@ from PyQt5.QtCore import  QDate,QTime,QDateTime
 from PyQt5.QtWidgets import QFileDialog, QPushButton
 
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -283,17 +284,29 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 #................................................................................................................
+        self.actionOpen.triggered.connect(self.browse)
+        self.actionNew.triggered.connect(self.newwin)
         self.listWidget.close()
         self.pushButton_2.clicked.connect(self.diagn_clicked)
         self.frame_6.close()
         self.frame_7.close()
         self.label_4.close()
         self.listWidget.itemDoubleClicked.connect(self.getitem)
-        # self.pushButton_2.itemDoubleClicked.connect(self.close_list)
         self.pushButton.clicked.connect(self.browse)
         self.pushButton_6.clicked.connect(self.time_show)
         self.comboBox_2.currentIndexChanged.connect(self.press)
         self.listopen=False
+
+    def newwin(self):
+        self.window=QtWidgets.QMainWindow()
+        self.ui=Ui_MainWindow()
+        self.ui.setupUi(self.window)
+        self.window.show()
+    
+    def browse(self):
+        path = QFileDialog.getOpenFileName(None, 'Open a file', '','All Files (*.*)')
+        if path != ('', ''):
+            print("File path : "+ path[0])
 
     def getitem(self):
         selected=self.listWidget.currentRow()
