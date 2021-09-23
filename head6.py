@@ -318,7 +318,6 @@ class Ui_MainWindow(object):
         else:
             pass
         
-
     def diagn_clicked(self):
         if self.listopen==False:
             self.listWidget.show()

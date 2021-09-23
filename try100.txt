@@ -1,1 +1,14 @@
-data={'hard': [11 01],'soft':[11 02]}
+Main: ECU Reset      
+Child1: Hard Reset 
+Content: [11 01]  
+Child2: Soft Reset
+Content: [11 02]
+
+Main: Identification
+Child1: Active Dignostic Information Read
+
+Main: Security Access
+Child1: Request Seed
+Content: [27 01]
+child2: Request Key
+Content: [27 02]
