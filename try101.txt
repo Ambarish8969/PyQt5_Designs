@@ -1,0 +1,5 @@
+Main: Security Access
+Child1: Request Seed
+Content: [27 01]
+child2: Request Key
+Content: [27 02]

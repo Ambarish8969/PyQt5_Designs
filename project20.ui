@@ -139,41 +139,6 @@
      <property name="frameShadow">
       <enum>QFrame::Raised</enum>
      </property>
-     <widget class="QTableWidget" name="tableWidget">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>20</y>
-        <width>381</width>
-        <height>121</height>
-       </rect>
-      </property>
-      <row>
-       <property name="text">
-        <string>1</string>
-       </property>
-      </row>
-      <row>
-       <property name="text">
-        <string>2</string>
-       </property>
-      </row>
-      <column>
-       <property name="text">
-        <string>Parameters</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Value</string>
-       </property>
-      </column>
-      <column>
-       <property name="text">
-        <string>Unit</string>
-       </property>
-      </column>
-     </widget>
     </widget>
     <widget class="QFrame" name="frame_4">
      <property name="geometry">
@@ -283,6 +248,21 @@ color: rgb(248, 248, 248);</string>
        </property>
       </column>
      </widget>
+    </widget>
+    <widget class="QTreeWidget" name="treeWidget">
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>60</y>
+       <width>256</width>
+       <height>192</height>
+      </rect>
+     </property>
+     <column>
+      <property name="text">
+       <string notr="true">1</string>
+      </property>
+     </column>
     </widget>
    </widget>
    <widget class="QFrame" name="frame">

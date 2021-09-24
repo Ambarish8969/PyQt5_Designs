@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<File_Name>
- <FileData>
+<root>
+ <filedata>
   <Main>ECU Reset</Main>
   <Child1>Hard Reset</Child1>
   <Content>[11 01]</Content>
   <Child2>Soft Reset</Child2>
   <Content>[11 02]</Content>
- </FileData>
- <FileData>
+ </filedata>
+ <filedata>
   <Main>Identification</Main>
   <Child1>Active Dignostic Information Read</Child1>
- </FileData>
- <FileData>
+ </filedata>
+ <filedata>
   <Main>Security Access</Main>
   <Child1>Request Seed</Child1>
   <Content>[27 01]</Content>
   <child2>Request Key</child2>
   <Content>[27 02]</Content>
- </FileData>
-</File_Name>
+ </filedata>
+</root>
