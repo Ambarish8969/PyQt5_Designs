@@ -305,9 +305,9 @@ class Ui_MainWindow(object):
         self.lineEdit.textChanged[str].connect(self.convert_to_xml)
         self.listopen=False
 
-    #function for Opening the file........
+    #Function for Opening the file........
     def browse(self):    
-        path = QFileDialog.getOpenFileName(None, 'Open a file', '','All Files (*.*)')
+        path = QFileDialog.getOpenFileName(None, 'Open a file', '','Text Files (*.txt)')
         url=QtCore.QUrl.fromLocalFile(path)
         self.lineEdit.setText(str(url.fileName()))
         if path != ('', ''):
@@ -364,7 +364,7 @@ class Ui_MainWindow(object):
                 a.addChild(QtWidgets.QTreeWidgetItem([content]))
         displaytree(a,tree)
 
-    #function for Creating New Window........
+    #Function for Creating New Window........
     def newwin(self):
         self.window=QtWidgets.QMainWindow()
         self.ui=Ui_MainWindow()
@@ -400,7 +400,7 @@ class Ui_MainWindow(object):
 
     #Function for browsing the files.........
     def browse(self):
-        filename = QFileDialog.getOpenFileName(None, "Open File", "")
+        filename = QFileDialog.getOpenFileName(None, "Open File"," ", "Text Files (*.txt*)")
         self.lineEdit.setText(filename[0])
 
     #Function for Selecting Combobox Items...........
