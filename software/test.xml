@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<File_Name>
+ <FileData>
+  <Main>Security Access</Main>
+  <Child1>Request Seed</Child1>
+  <Content>[27 01]</Content>
+  <child2>Request Key</child2>
+  <Content>[27 02]</Content>
+ </FileData>
+</File_Name>

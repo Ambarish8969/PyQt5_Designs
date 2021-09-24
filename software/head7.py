@@ -397,7 +397,7 @@ class Ui_MainWindow(object):
         time=currentTime.toString()
         self.lineEdit_3.setText(str(time))
         print(time)
-
+        
     #Function for browsing the files.........
     def browse(self):
         filename = QFileDialog.getOpenFileName(None, "Open File"," ", "Text Files (*.txt*)")
