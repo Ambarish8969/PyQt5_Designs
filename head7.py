@@ -305,13 +305,15 @@ class Ui_MainWindow(object):
         self.lineEdit.textChanged[str].connect(self.convert_to_xml)
         self.listopen=False
 
-    def browse(self):
+    #function for Opening the file........
+    def browse(self):    
         path = QFileDialog.getOpenFileName(None, 'Open a file', '','All Files (*.*)')
         url=QtCore.QUrl.fromLocalFile(path)
         self.lineEdit.setText(str(url.fileName()))
         if path != ('', ''):
             print("File path : "+ path[0])   
-
+    
+    #Function for converting text file to xml file.......
     def convert_to_xml(self,path):
         root = et.Element('File_Name')
         with open(path) as f:
@@ -337,10 +339,11 @@ class Ui_MainWindow(object):
             f.write(formatedXML)
         self.treeWidget.show()
 
-  
+        #Reading the file...........
         f=open("test.xml","r").read()
         self.printtree(f)
 
+    #When treewidget item clicked.............
     def onItemClicked(self):
         item=self.treeWidget.currentItem()
         print(item.text(0))
@@ -361,12 +364,14 @@ class Ui_MainWindow(object):
                 a.addChild(QtWidgets.QTreeWidgetItem([content]))
         displaytree(a,tree)
 
+    #function for Creating New Window........
     def newwin(self):
         self.window=QtWidgets.QMainWindow()
         self.ui=Ui_MainWindow()
         self.ui.setupUi(self.window)
         self.window.show()
     
+    #Function for getting items when listwidget items double clicked......
     def getitem(self):
         selected=self.listWidget.currentRow()
         if str(selected)=="0":
@@ -377,6 +382,7 @@ class Ui_MainWindow(object):
         else:
             pass
         
+    #Action for when diagnostic service clicked........
     def diagn_clicked(self):
         if self.listopen==False:
             self.listWidget.show()
@@ -384,20 +390,20 @@ class Ui_MainWindow(object):
         else:
             self.listWidget.close()
             self.listopen=False
-
-    def diagn_clicked_again(self):
-        self.listWidget.close()
     
+    #Function for system time............
     def time_show(self):
         currentTime=QtCore.QTime.currentTime()
         time=currentTime.toString()
         self.lineEdit_3.setText(str(time))
         print(time)
 
+    #Function for browsing the files.........
     def browse(self):
         filename = QFileDialog.getOpenFileName(None, "Open File", "")
         self.lineEdit.setText(filename[0])
 
+    #Function for Selecting Combobox Items...........
     def press(self):
         select=self.comboBox_2.currentText()
         data=['Hard','Soft']
@@ -422,8 +428,8 @@ class Ui_MainWindow(object):
         self.pushButton_3.setText(_translate("MainWindow", "Flash Programming"))
         self.pushButton_4.setText(_translate("MainWindow", "Self Test DIDs"))
         self.pushButton.setText(_translate("MainWindow", "Browse"))
-        self.comboBox_2.setItemText(0, _translate("MainWindow", "11 02"))
-        self.comboBox_2.setItemText(1, _translate("MainWindow", "11 01"))
+        self.comboBox_2.setItemText(0, _translate("MainWindow", "Hard Reset"))
+        self.comboBox_2.setItemText(1, _translate("MainWindow", "Soft Reset"))
         __sortingEnabled = self.listWidget.isSortingEnabled()
         self.listWidget.setSortingEnabled(False)
         item = self.listWidget.item(0)
