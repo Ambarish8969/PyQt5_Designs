@@ -1,8 +1,0 @@
-<?xml version='1.0' encoding='utf-8'?>
-<sub><usr>{
-</usr><usr>    Main= ECU Reset
-</usr><usr>    Child1=Hard Reset
-</usr><usr>    Content=[11 01]
-</usr><usr>    Child2=Software Reset
-</usr><usr>    Content=[11 02]
-</usr><usr>}</usr></sub>
