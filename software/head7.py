@@ -16,6 +16,7 @@ import itertools as it
 import xml.dom.minidom as minidom
 
 
+
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -306,12 +307,12 @@ class Ui_MainWindow(object):
         self.listopen=False
 
     #Function for Opening the file........
-    def browse(self):    
-        path = QFileDialog.getOpenFileName(None, 'Open a file', '','Text Files (*.txt)')
-        url=QtCore.QUrl.fromLocalFile(path)
-        self.lineEdit.setText(str(url.fileName()))
-        if path != ('', ''):
-            print("File path : "+ path[0])   
+    # def browse(self):    
+    #     path = QFileDialog.getOpenFileName(None, 'Open a file', '','Text Files (*.txt)')
+    #     url=QtCore.QUrl.fromLocalFile(path)
+    #     self.lineEdit.setText(str(url.fileName()))
+    #     if path != ('', ''):
+    #         print("File path : "+ path[0])   
 
     #Function for browsing the files.........
     def browse(self,filename):
@@ -320,7 +321,7 @@ class Ui_MainWindow(object):
         self.lineEdit.setText(filename[0])
         # Without returning filename how are accessing it?
         
-    
+        
     #Function for converting text file to xml file.......
     def convert_to_xml(self,filename):
         root_name=Path(filename)
