@@ -8,7 +8,6 @@
 # print(spli[-1])
 # taile=os.path.basename(spli[1])
 # print(taile)
-from head7 import browse
 from pathlib import Path
 path=Path("D:\PyQt5_Designs\Try100.py")
 print(path.name)
