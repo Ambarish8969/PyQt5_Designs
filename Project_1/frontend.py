@@ -55,6 +55,7 @@ class Ui_MainWindow(object):
 #..............................................................................................................
         self.pushButton.clicked.connect(self.onClickConnectButton)
         self.listWidget.itemDoubleClicked.connect(self.open_terminal)
+        self.listWidget.itemDoubleClicked.connect(self.show_connection)
 
     # Opening the terminal window after selecting item  in listwidget.
     def open_terminal(self):
@@ -62,9 +63,13 @@ class Ui_MainWindow(object):
         self.ambi=Ui_MainWindow2()
         self.ambi.setupUi(self.window)
         self.window.show()
+        
+    def show_connection(self):
+        time.sleep(2)
+        self.ambi.label.setText(str("waiting for the connection...."))
     
     def onClickConnectButton(self):
-        if (self.lineEdit.text()=="connect"):
+        if (self.lineEdit.text().lower()=="connect"):
             self.ambi.label.setText(str("Connected"))
             self.lineEdit.clear()
         else:

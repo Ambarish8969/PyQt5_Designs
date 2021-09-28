@@ -45,8 +45,9 @@ class Ui_MainWindow2(object):
 
 
         
-        time.sleep(2)
-        self.label.setText(str("Waiting for the Connection......"))
+        
+        # self.label.setText(str("Waiting for the Connection......"))
+        
     
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate

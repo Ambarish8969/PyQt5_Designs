@@ -4,3 +4,4 @@ if input1.capitalize()=='Connect':
     print("Connected.")
 else:
     print("Not Connected.")
+    
