@@ -1,7 +1,7 @@
-print("Waiting for the connection...")
-input1=input("Enter the data : ")
-if input1.capitalize()=='Connect':
-    print("Connected.")
-else:
-    print("Not Connected.")
-    print
+from tkinter import *
+window=Tk()
+btn=Button(window, text="This is Button widget", fg='blue')
+btn.place(x=80, y=100)
+window.title('Hello Python')
+window.geometry("300x200+10+10")
+window.mainloop()

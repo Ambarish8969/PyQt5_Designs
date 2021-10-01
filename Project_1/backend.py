@@ -46,12 +46,10 @@ class Ui_MainWindow2(object):
 
         
         
-        # self.label.setText(str("Waiting for the Connection......"))
-        
     
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Terminal"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "Hardware Tool"))
 
 
 if __name__ == "__main__":
