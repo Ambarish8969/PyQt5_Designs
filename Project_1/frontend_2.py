@@ -11,7 +11,7 @@
 import time
 # from tkinter import Text
 from PyQt5 import QtCore, QtGui, QtWidgets
-from backend import Ui_MainWindow2
+
 from PyQt5.QtWidgets import QMessageBox
 
 data_1="0x5555AAAA"

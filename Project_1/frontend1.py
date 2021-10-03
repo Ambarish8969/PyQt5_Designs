@@ -66,13 +66,6 @@ class Ui_MainWindow(object):
         self.pushButton.clicked.connect(self.onClickconnect)
         self.lineEdit.close()
         self.pushButton_2.clicked.connect(self.onClickConnectButton)
-  
-    # def if_data_correct(self):
-        # msg=QMessageBox()
-        # msg.setWindowTitle("Status")
-        # msg.setText("Control is in Application.")
-        # msg.setIcon(QMessageBox.Information)
-        # x=msg.exec_()
 
     def onClickconnect(self):
         self.ambi.label.setText("connected")
@@ -95,7 +88,7 @@ class Ui_MainWindow(object):
     def onClickConnectButton(self):
         if (self.lineEdit.text()=="0x5555AAAA"):
             # print("Control is in Application.")
-            self.ambi.label.setText(str("Control is in Application."))
+            self.label_2.setText(str("Control is in Application."))
             # Show message box.
             msg=QMessageBox()
             msg.setWindowTitle("Status")
