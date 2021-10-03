@@ -7,11 +7,14 @@
     <x>0</x>
     <y>0</y>
     <width>1011</width>
-    <height>611</height>
+    <height>607</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>ATSSL</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(175, 175, 175);</string>
   </property>
   <property name="animated">
    <bool>true</bool>
@@ -89,6 +92,26 @@
      <item>
       <property name="text">
        <string>USB</string>
+      </property>
+     </item>
+    </widget>
+    <widget class="QListWidget" name="listWidget_2">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>70</y>
+       <width>101</width>
+       <height>171</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Physical</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Functional</string>
       </property>
      </item>
     </widget>
@@ -329,109 +352,55 @@
      </column>
     </widget>
    </widget>
-   <widget class="QFrame" name="frame_3">
+   <widget class="QTableWidget" name="tableWidget">
     <property name="geometry">
      <rect>
-      <x>0</x>
-      <y>290</y>
-      <width>1021</width>
-      <height>41</height>
+      <x>10</x>
+      <y>300</y>
+      <width>501</width>
+      <height>221</height>
      </rect>
     </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(152, 152, 152);
-border-color: rgb(0, 0, 0);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="label_2">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>10</y>
-       <width>55</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
+    <row>
      <property name="text">
-      <string>TX</string>
+      <string>1</string>
      </property>
-    </widget>
-    <widget class="QLineEdit" name="lineEdit_3">
-     <property name="geometry">
-      <rect>
-       <x>140</x>
-       <y>10</y>
-       <width>171</width>
-       <height>22</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">background-color: rgb(255, 255, 255);</string>
-     </property>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="frame_4">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>330</y>
-      <width>1031</width>
-      <height>41</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">border-color: rgb(0, 0, 0);
-background-color: rgb(214, 214, 214);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-    <widget class="QLabel" name="label_3">
-     <property name="geometry">
-      <rect>
-       <x>480</x>
-       <y>10</y>
-       <width>55</width>
-       <height>16</height>
-      </rect>
-     </property>
-     <property name="styleSheet">
-      <string notr="true">color: rgb(255, 255, 255);</string>
-     </property>
+    </row>
+    <row>
      <property name="text">
-      <string>RX</string>
+      <string>2</string>
      </property>
-    </widget>
-   </widget>
-   <widget class="QFrame" name="frame_5">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>370</y>
-      <width>1011</width>
-      <height>161</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">background-color: rgb(238, 226, 255);</string>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::StyledPanel</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>3</string>
+     </property>
+    </row>
+    <row>
+     <property name="text">
+      <string>4</string>
+     </property>
+    </row>
+    <column>
+     <property name="text">
+      <string>Time</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>CAN ID</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>TX/RX</string>
+     </property>
+    </column>
+    <column>
+     <property name="text">
+      <string>Response</string>
+     </property>
+    </column>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
