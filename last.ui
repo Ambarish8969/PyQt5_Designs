@@ -1,0 +1,767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>735</width>
+    <height>581</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Notepad</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QFrame" name="frame">
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_3">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_10">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="frame_12">
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(235, 255, 236);</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <widget class="QPushButton" name="pushButton">
+                <property name="geometry">
+                 <rect>
+                  <x>120</x>
+                  <y>2</y>
+                  <width>91</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Protocal</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="pushButton_2">
+                <property name="geometry">
+                 <rect>
+                  <x>210</x>
+                  <y>2</y>
+                  <width>91</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Flash servicing</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="pushButton_3">
+                <property name="geometry">
+                 <rect>
+                  <x>304</x>
+                  <y>2</y>
+                  <width>81</width>
+                  <height>21</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>SelftestDIDs</string>
+                </property>
+               </widget>
+               <widget class="QFrame" name="frame_11">
+                <property name="geometry">
+                 <rect>
+                  <x>-1</x>
+                  <y>-1</y>
+                  <width>121</width>
+                  <height>271</height>
+                 </rect>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+                <widget class="QComboBox" name="comboBox">
+                 <property name="geometry">
+                  <rect>
+                   <x>20</x>
+                   <y>40</y>
+                   <width>81</width>
+                   <height>22</height>
+                  </rect>
+                 </property>
+                 <item>
+                  <property name="text">
+                   <string>Pysical</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Functional </string>
+                  </property>
+                 </item>
+                </widget>
+                <widget class="QPushButton" name="pushButton_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>160</y>
+                   <width>101</width>
+                   <height>23</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>connection button</string>
+                 </property>
+                </widget>
+                <widget class="QLabel" name="label_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>30</x>
+                   <y>0</y>
+                   <width>81</width>
+                   <height>20</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string>select filter</string>
+                 </property>
+                </widget>
+               </widget>
+               <widget class="QTreeWidget" name="treeWidget">
+                <property name="geometry">
+                 <rect>
+                  <x>120</x>
+                  <y>70</y>
+                  <width>141</width>
+                  <height>71</height>
+                 </rect>
+                </property>
+                <column>
+                 <property name="text">
+                  <string notr="true">1</string>
+                 </property>
+                </column>
+               </widget>
+               <widget class="QLabel" name="label_4">
+                <property name="geometry">
+                 <rect>
+                  <x>140</x>
+                  <y>40</y>
+                  <width>81</width>
+                  <height>16</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Dignostic service</string>
+                </property>
+               </widget>
+               <widget class="QPushButton" name="pushButton_5">
+                <property name="geometry">
+                 <rect>
+                  <x>130</x>
+                  <y>150</y>
+                  <width>75</width>
+                  <height>23</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string>Transmitt</string>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="lineEdit_3">
+                <property name="geometry">
+                 <rect>
+                  <x>240</x>
+                  <y>150</y>
+                  <width>113</width>
+                  <height>20</height>
+                 </rect>
+                </property>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="frame_2">
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Plain</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_4">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Plain</enum>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_4">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="frame_5">
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <layout class="QHBoxLayout" name="horizontalLayout">
+                <property name="spacing">
+                 <number>0</number>
+                </property>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>0</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>0</number>
+                </property>
+                <item>
+                 <widget class="QFrame" name="frame_7">
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgb(235, 255, 236);</string>
+                  </property>
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <widget class="QTableWidget" name="tableWidget">
+                   <property name="geometry">
+                    <rect>
+                     <x>-5</x>
+                     <y>0</y>
+                     <width>361</width>
+                     <height>211</height>
+                    </rect>
+                   </property>
+                   <row>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </row>
+                   <row>
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                   </row>
+                   <row>
+                    <property name="text">
+                     <string>4</string>
+                    </property>
+                   </row>
+                   <column>
+                    <property name="text">
+                     <string>New Column</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>System Time</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>TX or RX</string>
+                    </property>
+                   </column>
+                   <column>
+                    <property name="text">
+                     <string>Response</string>
+                    </property>
+                   </column>
+                  </widget>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QFrame" name="frame_6">
+                  <property name="frameShape">
+                   <enum>QFrame::StyledPanel</enum>
+                  </property>
+                  <property name="frameShadow">
+                   <enum>QFrame::Raised</enum>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_5">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <widget class="QFrame" name="frame_8">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(235, 255, 236);</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <widget class="QLabel" name="label">
+                      <property name="geometry">
+                       <rect>
+                        <x>40</x>
+                        <y>20</y>
+                        <width>101</width>
+                        <height>31</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>TX Framebel</string>
+                      </property>
+                     </widget>
+                     <widget class="QLineEdit" name="lineEdit">
+                      <property name="geometry">
+                       <rect>
+                        <x>180</x>
+                        <y>30</y>
+                        <width>113</width>
+                        <height>20</height>
+                       </rect>
+                      </property>
+                     </widget>
+                     <widget class="QFrame" name="frame_13">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>10</y>
+                        <width>341</width>
+                        <height>80</height>
+                       </rect>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_9">
+                     <property name="styleSheet">
+                      <string notr="true">background-color: rgb(235, 255, 236);</string>
+                     </property>
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <widget class="QLabel" name="label_2">
+                      <property name="geometry">
+                       <rect>
+                        <x>40</x>
+                        <y>30</y>
+                        <width>71</width>
+                        <height>20</height>
+                       </rect>
+                      </property>
+                      <property name="text">
+                       <string>RX Label</string>
+                      </property>
+                     </widget>
+                     <widget class="QLineEdit" name="lineEdit_2">
+                      <property name="geometry">
+                       <rect>
+                        <x>180</x>
+                        <y>30</y>
+                        <width>113</width>
+                        <height>20</height>
+                       </rect>
+                      </property>
+                     </widget>
+                     <widget class="QFrame" name="frame_14">
+                      <property name="geometry">
+                       <rect>
+                        <x>10</x>
+                        <y>10</y>
+                        <width>341</width>
+                        <height>80</height>
+                       </rect>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                     </widget>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>735</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menufile">
+    <property name="title">
+     <string>file</string>
+    </property>
+    <addaction name="actionnew"/>
+    <addaction name="actionopen_2"/>
+    <addaction name="actionopen_as"/>
+    <addaction name="actiondelete"/>
+    <addaction name="actionexit"/>
+   </widget>
+   <widget class="QMenu" name="menuEdit">
+    <property name="title">
+     <string>Edit</string>
+    </property>
+    <addaction name="actionpaste"/>
+    <addaction name="actionPaste"/>
+    <addaction name="actionDelete"/>
+    <addaction name="actionRename"/>
+   </widget>
+   <widget class="QMenu" name="menuTool">
+    <property name="title">
+     <string>Tool</string>
+    </property>
+    <addaction name="actionTool_1"/>
+    <addaction name="actionTool_2"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionAsk_any_question"/>
+   </widget>
+   <widget class="QMenu" name="menuOther">
+    <property name="title">
+     <string>Other</string>
+    </property>
+    <addaction name="actionNew_window"/>
+   </widget>
+   <addaction name="menufile"/>
+   <addaction name="menuEdit"/>
+   <addaction name="menuTool"/>
+   <addaction name="menuHelp"/>
+   <addaction name="menuOther"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QToolBar" name="toolBar">
+   <property name="windowTitle">
+    <string>toolBar</string>
+   </property>
+   <attribute name="toolBarArea">
+    <enum>TopToolBarArea</enum>
+   </attribute>
+   <attribute name="toolBarBreak">
+    <bool>false</bool>
+   </attribute>
+   <addaction name="actionnew"/>
+   <addaction name="actionopen_2"/>
+   <addaction name="actionsave"/>
+   <addaction name="actioncopy"/>
+   <addaction name="actiondelete"/>
+  </widget>
+  <action name="actionPaste">
+   <property name="text">
+    <string>Paste</string>
+   </property>
+   <property name="statusTip">
+    <string>paste</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+V</string>
+   </property>
+  </action>
+  <action name="actionDelete">
+   <property name="text">
+    <string>Delete</string>
+   </property>
+   <property name="statusTip">
+    <string>delete</string>
+   </property>
+   <property name="shortcut">
+    <string>Del</string>
+   </property>
+  </action>
+  <action name="actionTool_1">
+   <property name="text">
+    <string>Tool 1</string>
+   </property>
+  </action>
+  <action name="actionTool_2">
+   <property name="text">
+    <string>Tool 2</string>
+   </property>
+  </action>
+  <action name="actionAsk_any_question">
+   <property name="text">
+    <string>Ask any question....</string>
+   </property>
+  </action>
+  <action name="actionRename">
+   <property name="text">
+    <string>Rename</string>
+   </property>
+   <property name="statusTip">
+    <string>rename</string>
+   </property>
+   <property name="shortcut">
+    <string>F2</string>
+   </property>
+  </action>
+  <action name="actionNew_window">
+   <property name="text">
+    <string>new window</string>
+   </property>
+  </action>
+  <action name="actionNew">
+   <property name="text">
+    <string>New</string>
+   </property>
+   <property name="statusTip">
+    <string>open new window</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+N</string>
+   </property>
+  </action>
+  <action name="actionopen">
+   <property name="text">
+    <string>open</string>
+   </property>
+   <property name="statusTip">
+    <string>open file</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionopen_as">
+   <property name="text">
+    <string>save as...</string>
+   </property>
+  </action>
+  <action name="actionexit">
+   <property name="text">
+    <string>exit</string>
+   </property>
+   <property name="statusTip">
+    <string>exit</string>
+   </property>
+  </action>
+  <action name="actionhome">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/icon2.svg</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>home</string>
+   </property>
+  </action>
+  <action name="actionpaste">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/copy.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>paste</string>
+   </property>
+  </action>
+  <action name="actioncopy">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/copy.png</normaloff>icons/copy.png</iconset>
+   </property>
+   <property name="text">
+    <string>copy</string>
+   </property>
+  </action>
+  <action name="actiondelete">
+   <property name="icon">
+    <iconset>
+     <normaloff>icons/delete.jpg</normaloff>icons/delete.jpg</iconset>
+   </property>
+   <property name="text">
+    <string>delete</string>
+   </property>
+  </action>
+  <action name="actionnew">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/new.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>New</string>
+   </property>
+  </action>
+  <action name="actionsave">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/save.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>save</string>
+   </property>
+  </action>
+  <action name="actionopen_2">
+   <property name="icon">
+    <iconset>
+     <normalon>icons/open.png</normalon>
+    </iconset>
+   </property>
+   <property name="text">
+    <string>open</string>
+   </property>
+  </action>
+ </widget>
+ <resources>
+  <include location="icons/uicon.qrc"/>
+ </resources>
+ <connections/>
+</ui>
