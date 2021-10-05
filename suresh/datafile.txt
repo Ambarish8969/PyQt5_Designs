@@ -1,0 +1,3 @@
+ECUReset,HardReset,[11 01],SoftReset,[11 02]
+Identification,ActiveDiagnosticInformationRead,[22 F1 00]
+SecurityAccess,RequestSeed,[27 01],RequestKey,[27 02]

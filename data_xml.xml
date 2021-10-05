@@ -1,0 +1,1 @@
+<ATSSL><ECUReset><HardReset>[11 01]</HardReset><SoftReset>[11 02]</SoftReset></ECUReset><Identification><ActiveDiagnosticInformationRead>[22 F1 00]</ActiveDiagnosticInformationRead></Identification><SecurityAccess><RequestSeed>[27 01]</RequestSeed><RequestKey>[27 02]</RequestKey></SecurityAccess></ATSSL>
