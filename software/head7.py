@@ -319,7 +319,7 @@ class Ui_MainWindow(object):
         filename = QFileDialog.getOpenFileName(None, "Open File"," ", "Text Files (*.txt*)")
         # print(filename)
         self.lineEdit.setText(filename[0])
-        # Without returning filename how are accessing it?
+        # Without returning filename how we are accessing it?
         
         
     #Function for converting text file to xml file.......

@@ -2,7 +2,11 @@ from PyQt5.QtWidgets import QApplication, QTreeWidget, QTreeWidgetItem, QWidget,
 from PyQt5 import QtCore, QtGui, QtWidgets
 import xml.etree.ElementTree as xml
 import datetime as dt
-
+import socket as sk
+import time
+import sys
+s=sk.socket()
+s.connect(("localhost", 56670))
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
@@ -247,13 +251,14 @@ class Ui_MainWindow(object):
         self.toolBar.addAction(self.actionDelete_2)
         self.toolBar.addAction(self.actionCut_2)
         self.toolBar.addAction(self.actionSettings)
-
+# ..............................................................................................................
         self.data_tree.close()
         self.outWD.close()
         self.tarnsmitBN.close()
         self.data_tree.itemDoubleClicked.connect(self.select_data)
         #self.tarnsmitBN.clicked.connect(self.show_msg)
-        self.connectBN.clicked.connect(self.phy_fun)
+        # self.connectBN.clicked.connect(self.phy_fun)
+        self.connectBN.clicked.connect(self.connection)
 
         self.browseBN.clicked.connect(self.get_file)
         self.tarnsmitBN.clicked.connect(self.transmit_data)
@@ -261,6 +266,13 @@ class Ui_MainWindow(object):
         self.retranslateUi(MainWindow)
         #self.hometab.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def connection(self):
+        for i in range(3):
+            print("Waiting for the connection....",sep=' ',flush=True)
+            time.sleep(1.5)
+        print(s.recv(1024).decode())
+        
 
     def get_file(self):
         tab=self.hometab.currentIndex()
@@ -318,44 +330,59 @@ class Ui_MainWindow(object):
         self.outWD.setText("0" + str(cnt2) + " " + cnt1)
         self.outWD.show()
         self.tarnsmitBN.show()
+        # return showed_data
 
-    def transmit_data(self):
+    def transmit_data(self,showed_data):
+        showed_data=self.outWD.text()
+        data=700
+        s.send(bytes(str(data),"utf-8"))
+        s.recv(1024).decode()
         sys_time=dt.datetime.now()
         t=str(sys_time.strftime("    %H:%M:%S:%f"))
         self.data_table.setItem(0,0,QtWidgets.QTableWidgetItem(t[:-3]))
-        self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem("    0X700"))
-        self.data_table.setItem(0,2,QtWidgets.QTableWidgetItem("    TX"))
-        self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem("    1000"))
+        self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem(str(data)))
+        self.data_table.setItem(0,2,QtWidgets.QTableWidgetItem("TX"))
+        self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem(showed_data))
+        time.sleep(2)
+        print("Loading....")
+        time.sleep(3) 
+        sys_time2=dt.datetime.now()
+        t2=str(sys_time2.strftime("    %H:%M:%S:%f"))
+        self.data_table.setItem(1,0,QtWidgets.QTableWidgetItem(t2[:-3]))
+        self.data_table.setItem(1,1,QtWidgets.QTableWidgetItem(str(data+8)))
+        self.data_table.setItem(1,2,QtWidgets.QTableWidgetItem("RX"))
+        self.data_table.setItem(1,3,QtWidgets.QTableWidgetItem(showed_data))
 
-    def phy_fun(self):
-        index=int(self.phy_funBX.currentIndex())
-        if index==0:
-            msg=QMessageBox()
-            msg.setWindowTitle("Status")
-            msg.setText("Select at least one option      ")
-            msg.setIcon(QMessageBox.Critical)
-            x=msg.exec_() 
-        elif index==1:
-            sys_time=dt.datetime.now()
-            t=str(sys_time.strftime("    %H:%M:%S:%f"))
-            self.data_table.setItem(0,0,QtWidgets.QTableWidgetItem(t[:-3]))
-            self.data_table.setItem(0,2,QtWidgets.QTableWidgetItem("    RX"))
-            id=format(700, "b")
-            slid=format(8, "b")
-            self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem("    "+ str(700)))
-            self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem(str(id)+"  "+str(slid)))
-        else:
-            sys_time=dt.datetime.now()
-            t=str(sys_time.strftime("    %H:%M:%S:%f"))
-            self.data_table.setItem(0,0,QtWidgets.QTableWidgetItem(t[:-3]))
-            self.data_table.setItem(0,2,QtWidgets.QTableWidgetItem("    RX"))
-            id=format(900, "b")
-            slid=format(8, "b")
-            self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem("    "+ str(900)))
-            self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem(str(id)+"  "+str(slid)))
+
+    # def phy_fun(self):
+    #     index=int(self.phy_funBX.currentIndex())
+    #     if index==0:
+    #         msg=QMessageBox()
+    #         msg.setWindowTitle("Status")
+    #         msg.setText("Select at least one option      ")
+    #         msg.setIcon(QMessageBox.Critical)
+    #         x=msg.exec_() 
+    #     elif index==1:
+    #         sys_time=dt.datetime.now()
+    #         t=str(sys_time.strftime("    %H:%M:%S:%f"))
+    #         self.data_table.setItem(0,0,QtWidgets.QTableWidgetItem(t[:-3]))
+    #         self.data_table.setItem(0,2,QtWidgets.QTableWidgetItem("    RX"))
+    #         id=format(700, "b")
+    #         slid=format(8, "b")
+    #         self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem("    "+ str(700)))
+    #         self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem(str(id)+"  "+str(slid)))
+    #     else:
+    #         sys_time=dt.datetime.now()
+    #         t=str(sys_time.strftime("    %H:%M:%S:%f"))
+    #         self.data_table.setItem(0,0,QtWidgets.QTableWidgetItem(t[:-3]))
+    #         self.data_table.setItem(0,2,QtWidgets.QTableWidgetItem("    RX"))
+    #         id=format(900, "b")
+    #         slid=format(8, "b")
+    #         self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem("    "+ str(900)))
+    #         self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem(str(id)+"  "+str(slid)))
         
 
-
+# ............................................................................................................
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "ATSSL"))

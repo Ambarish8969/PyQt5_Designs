@@ -272,16 +272,20 @@ class Ui_MainWindow(object):
         QtCore.QMetaObject.connectSlotsByName(MainWindow)
 
         
-        self.connectBN.clicked.connect(self.select)
+        # self.connectBN.clicked.connect(self.select)
         self.browseBN.clicked.connect(self.browse)
         self.lineEdit.textChanged[str].connect(self.convert_to_xml)
         self.data_tree.itemDoubleClicked.connect(self.tree_content)
-        
+        self.tarnsmitBN.clicked.connect(self.select)
 
     def tree_content(self):
+        data=["Hard","Soft"]
         self.outWD.clear()
         x=self.data_tree.currentItem()
-        self.outWD.setText(str(x.text(0)))
+        y=x.text(0)
+        z=y[1:-1]
+        # self.outWD.setText(str(x.text(0)))
+        self.outWD.setText(f"{len(data)} {z}")
 
     #Function for browsing the files.........
     def browse(self,filename):
@@ -343,10 +347,11 @@ class Ui_MainWindow(object):
             self.data_table.setItem(0,0,QtWidgets.QTableWidgetItem(str(time)))
             self.data_table.setItem(0,2,QTableWidgetItem(str(self.outWD.text())))
             self.data_table.setItem(0,2,QtWidgets.QTableWidgetItem("    RX"))
-            id=format(700, "b")
-            slid=format(8, "b")
-            #self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem("    "+ str(700)))
-            self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem(str(id)+"  "+str(slid)))
+            # id=format(700, "b")
+            # slid=format(8, "b")
+            # #self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem("    "+ str(700)))
+            # self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem(str(id)+"  "+str(slid)))
+            self.data_table.setItem(0,3,QTableWidgetItem())
         elif choice=="Functional":
             self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem(str(physical)))
             self.data_table.setItem(0,0,QtWidgets.QTableWidgetItem(str(time)))
