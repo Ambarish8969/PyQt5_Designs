@@ -334,24 +334,30 @@ class Ui_MainWindow(object):
 
     def transmit_data(self,showed_data):
         showed_data=self.outWD.text()
-        data=700
+        if self.phy_funBX.currentText()=="Physical":
+            data=700
+        else:
+            data=900
         s.send(bytes(str(data),"utf-8"))
         s.recv(1024).decode()
-        sys_time=dt.datetime.now()
-        t=str(sys_time.strftime("    %H:%M:%S:%f"))
-        self.data_table.setItem(0,0,QtWidgets.QTableWidgetItem(t[:-3]))
-        self.data_table.setItem(0,1,QtWidgets.QTableWidgetItem(str(data)))
-        self.data_table.setItem(0,2,QtWidgets.QTableWidgetItem("TX"))
-        self.data_table.setItem(0,3,QtWidgets.QTableWidgetItem(showed_data))
-        time.sleep(2)
-        print("Loading....")
-        time.sleep(3) 
-        sys_time2=dt.datetime.now()
-        t2=str(sys_time2.strftime("    %H:%M:%S:%f"))
-        self.data_table.setItem(1,0,QtWidgets.QTableWidgetItem(t2[:-3]))
-        self.data_table.setItem(1,1,QtWidgets.QTableWidgetItem(str(data+8)))
-        self.data_table.setItem(1,2,QtWidgets.QTableWidgetItem("RX"))
-        self.data_table.setItem(1,3,QtWidgets.QTableWidgetItem(showed_data))
+        row=0
+        for i in range(2):
+            sys_time=dt.datetime.now()
+            t=str(sys_time.strftime("    %H:%M:%S:%f"))
+            self.data_table.setItem(row,0,QtWidgets.QTableWidgetItem(t[:-3]))
+            self.data_table.setItem(row,1,QtWidgets.QTableWidgetItem(str(data)))
+            self.data_table.setItem(row,2,QtWidgets.QTableWidgetItem("TX"))
+            self.data_table.setItem(row,3,QtWidgets.QTableWidgetItem(showed_data))
+            # time.sleep(2)
+            # print("Loading....")
+            time.sleep(3) 
+            sys_time2=dt.datetime.now()
+            t2=str(sys_time2.strftime("    %H:%M:%S:%f"))
+            self.data_table.setItem(row+1,0,QtWidgets.QTableWidgetItem(t2[:-3]))
+            self.data_table.setItem(row+1,1,QtWidgets.QTableWidgetItem(str(data+8)))
+            self.data_table.setItem(row+1,2,QtWidgets.QTableWidgetItem("RX"))
+            self.data_table.setItem(row+1,3,QtWidgets.QTableWidgetItem(showed_data))
+            row=row+2
 
 
     # def phy_fun(self):
